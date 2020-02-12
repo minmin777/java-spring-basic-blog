@@ -8,20 +8,20 @@
 </head>
 <body>
 <div th:replace="header :: header">
-<main role="main" class="py-5 flex-fill">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4 py-2 box-shadow" th:each="entry : ${posts}">
-                <img class="card-img-top" th:src="'https://picsum.photos/id/'+${entry.getId()}+'/500/350'" alt="Post Title Image">
-                <div class="card-body">
-                    <div class="card-title" th:text="${entry.getTitle()}"></div>
-                    <p class="card-text" th:text="${entry.getLead()}"></p>
-                    <div class="card-subtext"><a href="/#" th:text="${entry.getAuthor()}"></a></div>
+    <main role="main" class="py-5 flex-fill">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 py-2 box-shadow" th:each="entry : ${posts}">
+                    <img class="card-img-top" th:src="'https://picsum.photos/id/'+${entry.getId()}+'/500/350'" alt="Post Title Image">
+                    <div class="card-body">
+                        <div class="card-title" th:text="${entry.getTitle()}"></div>
+                        <p class="card-text" th:text="${entry.getLead()}"></p>
+                        <div class="card-subtext"><a href="/#" th:text="${entry.getAuthor()}"></a></div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
 </div>
 </body>
 <script th:src="@{/js/modernizr-2.8.3-respond-1.4.2.min.js}"></script>
